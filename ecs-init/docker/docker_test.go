@@ -94,7 +94,7 @@ func TestLoadImage(t *testing.T) {
 
 	mockDocker := NewMockdockerclient(mockCtrl)
 
-	mockDocker.EXPECT().LoadImage(godocker.LoadImageOptions{nil})
+	mockDocker.EXPECT().LoadImage(godocker.LoadImageOptions{})
 
 	client := &Client{
 		docker: mockDocker,
